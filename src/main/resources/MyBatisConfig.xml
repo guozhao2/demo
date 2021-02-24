@@ -2,19 +2,27 @@
 <!DOCTYPE configuration
         PUBLIC "-//mybatis.org//DTD config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
 <configuration >
+<!--    为了使用mybatis-log-->
+<!--    <settings>-->
+<!--        <setting name="logImpl" value="org.apache.ibatis.logging.stdout.StdOutImpl" />-->
+<!--    </settings>-->
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://127.0.0.1:3306/myapp"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/myapp?characterEncoding=UTF-8"/>
                 <property name="username"  value="root"/>
-                <property name="password" value="root"/>
+                <property name="password" value="QWER1234asdf"/>
             </dataSource>
         </environment>
     </environments>
+
     <mappers>
         <mapper resource="com/cat/mapper/StudentsMapper.xml"/>
     </mappers>
+
+
 </configuration>
